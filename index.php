@@ -13,7 +13,6 @@
         // si le produit n'existe pas le panier le creer avec une valeur quantite
         if (!isset($_SESSION['panier'][$_GET['add_to_cart']])){
             $_SESSION['panier'][$_GET['add_to_cart']]=array();
-            //           array_push($_SESSION['panier'],$_GET['add_to_cart']);
             $_SESSION['panier'][$_GET['add_to_cart']]['quantite']=1;
         }
         else{

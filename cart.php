@@ -12,6 +12,7 @@
         <p>Panier de <?php echo $_SESSION['loginname'] ?>:</p>
         <section class="cookies container-fluid">
             <div class="row">
+            <?php if(!isset ($_SESSION['panier'])){ echo "Panier vide";} else {?>
                 <?php foreach ($_SESSION['panier'] as $id=>$val) { ?>
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                     <figure class="thumbnail text-center">
@@ -23,7 +24,7 @@
                         </figcaption>
                     </figure>
                 </div>
-                <?php }?>
+                <?php } }?>
             </div>
         </section>
     </div>
